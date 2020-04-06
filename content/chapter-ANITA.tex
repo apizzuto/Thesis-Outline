@@ -1,0 +1,312 @@
+\chapter{Search for Counterparts to ANITA Neutrino Candidates}
+\label{sec:ANITA}
+
+
+The \textbf{AN}tarctic \textbf{I}mpulsive \textbf{T}ransient \textbf{A}ntenna (ANITA) is yet another experiment that searches for neutrino interactions that take place in the Antarctic ice. Throughout the experiment's first three flights, the ANITA collaboration has detected 2 anomalous events that are potential neutrino candidates as well as a candidate event from another detection channel. This chapter describes the followup we performed to search for possible astrophysical origins of these events, and outlines the limits we are able to set connecting a non-observation in the TeV - PeV range to the claimed observations in the EeV regime.
+
+
+\section{Cosmogenic Neutrinos}
+\label{sec:ANITA:cosmogenic}
+As described in section XXX, at the highest energies, the Universe is opaque to photons, as they interact with CMB photons between their inception and arrival on Earth. A similar process occurs with UHECRs, albeit at much higher energies, due to the $\Delta^{+}$ resonance, 
+\begin{equation}
+    \label{eq:delta_cmb}
+    p+\gamma_{\text{C M B}} \rightarrow \Delta^{+} \rightarrow n(p)+\pi^{+}\left(\pi^{0}\right) \; .
+\end{equation}
+The temperature of CMB photons ($\approx$ 2.7 K) fixes the proton energy for this resonance to be at or above around $10^{19.5}$ EeV. This resonant cross section leads to a steepening of the cosmic-ray spectrum, predicted independently by Griesen \cite{Greisen:1966jv} as well as Zatsepin and Kuzmin \cite{Zatsepin:1966jv} (this cutoff eponymously takes the name the ``GZK cutoff''). 
+
+While this process limits the reach of UHECR protons to be within a few tens of Mpc from their inception, the mesonic products of this cutoff lead to an increase in the UHE neutrino flux (``GZK'' or ``cosmogenic'' neutrinos) \cite{Beresinsky:1969qj}. Just as with the $pp$ and $p\gamma$ interactions discussed in Section XXX, the charged pions created from the UHECR-CMB interactions will decay into neutrinos, each of which carries a few percent of the initial UHE proton energy. 
+
+However, by considering the magnitude of the predicted neutrino fluxes from bottom-up models with AGN \cite{Murase:2015ndr, Murase:2014foa}, pulsars \cite{Fang:2013vla}, low-luminosity GRBs \cite{Boncioli:2018lrv}, Tidal Disruption Events \cite{Biehl:2017hnb}, or binary neutron stars \cite{Fang:2017tla}, or by considering the remaining parameter space from current experimental constraints \cite{Kotera:2010yn, Ahlers:2010fw, Ahlers:2012rz, Heinze:2019jou}, it quickly becomes clear that instrumented volumes exceeding that of a cubic-kilometer are necessary to detect the GZK neutrino flux. 
+
+One way to circumvent this problem is to, instead of searching for blue-ultraviolet wavelength photons from Cherenkov radiation, search for coherent radio emission. In the 1960's, Gurgen Askaryan noted that if an electromagnatic (EM) shower develops in a dielectric such as ice, then preferential annihilation of positrons leads to an overall negative charge excess \cite{Askaryan:1962hbi}. This $\sim$20\% negative charge excess gives rise to coherent Cherenkov radiation at long wavelenghts (and destructive interference for wavelengths comparable to the transverse shower size), named Askaryan radiation. In ice, this effect is coherent out to a few GHz \cite{Gorham:2006fy}.
+
+Additionally, cosmic rays that enter the atmosphere with energies around $10^{15}$ eV can form particle cascades, known as extensive air showers (EAS). The observable radiation from EAS is in part due to Askaryan radiation \cite{Aab:2014esa}, though the dominant contribution is from geomagnetic radiation \cite{Kahn:1966}, in which the electrons and positrons in EAS are split by, and oscillate around, the Earth's magnetic field. 
+
+
+
+\section{The ANITA Experiment}
+\label{sec:ANITA:detector}
+The ANtarctic Impulsive Transient Antenna (ANITA) is a NASA long duration balloon designed to detect radiation from UHE neutrinos interactions and EAS. At the time of writing, ANITA had flown four successful flights, with published results from the first three flights. A schematic of the detector as well as its various detection channels are displayed in Figure~\ref{fig:ANITA_instrument}. 
+
+\begin{figure}
+\centering
+\begin{subfigure}
+  \centering
+  \includegraphics[width=.65\linewidth]{figures/ANITA/ANITA_signals.png}
+  %\caption{A subfigure}
+  \label{fig:ANITA_cartoon}
+\end{subfigure}%
+\begin{subfigure}
+  \centering
+  \includegraphics[width=.3\linewidth]{figures/ANITA/ANITA_detector.png}
+  %\caption{A subfigure}
+  \label{fig:ANITA_detector}
+\end{subfigure}
+\caption[ANITA detector schematic]{(left) Sources to which ANITA is sensitive, with the exception of thermal noise. (right) The ANITA payload before the instrument's fourth flight. Both images taken from \cite{Ludwig:2019}}
+\label{fig:ANITA_instrument}
+\end{figure}
+
+In the search for the UHE component of the diffuse neutrino flux, ANITA has set the most constraining upper limits between $10^{19.5}$ and $10^{21}$ eV, combining results from the experiment's first three flights \cite{Gorham:2008yk, Gorham:2010kv, Allison:2018cxu}. However, in some of these analyses, individual candidate events were detected. Although these events were consistent with background estimates, one candidate event in ANITA-III was noted to have signal shape consistent with impulsive broadband emission that is characteristic of neutrino origin and to have originated from a location on the continent consistent with simulated distribution of neutrinos \cite{Allison:2018cxu}, although the detection of one candidate event is consistent with the background estimates of $0.7^{+0.5}_{-0.3}$ for these analyses. Private conversation with a member of the collaboration highlighted the event as an interesting candidate. 
+
+Although the diffuse neutrino flux has been the instrument's main science goal, the first flights have resulted in a few enigmatic detections. ANITA also reported two additional events, each consistent with a an astrophysical $\nu_{\tau}$ emerging from the Earth \citep{Feng:2001ue, Gorham:2016zah, Gorham:2018ydl}. In this scenario, a $\nu_{\tau}$ undergoes a charged-current interaction (CC) with a nucleus in the Earth. The $\tau$-lepton produced in this interaction subsequently decays in the atmosphere, producing an extensive air shower (EAS). The polarity of the radio signal allows one to identify and reject downward moving cosmic-ray induced EAS, as the radio signals of these EAS acquire a phase reversal (opposite polarity) from reflection off the Antarctic ice, while an upgoing $\tau$ induced EAS does acquire this phase reversal. The schematic in figure \ref{fig:ANITA_instrument} highlights the distinction between the types of signals to which ANITA is sensitive. 
+
+However, this interpretation poses many challenges  under Standard Model assumptions. First, for the observation angles and implied energies of the ANITA events, neutrinos are extremely unlikely to traverse the required chord lengths \citep{Gorham:2016zah}, even after accounting for an increase in the probability due to $\nu_{\tau}$ regeneration (explained in more detail later in this chapter). Second, if these events are of cosmogenic origin, they would imply fluxes that are in severe tension with limits set by multiple experiments \citep{Aab:2015kma, Zas:2017xdj, Aartsen:2016ngq} as well as a self-inconsistency from ANITA data alone. For an incident isotropic flux of neutrinos, for every one event arriving at elevation angles similar to the anomalous ANITA events (AAE), many events would be expected at other elevation angles, due to the detector's observation-angle dependent differential acceptance \citep{Romero-Wolf:2018zxt}.
+
+\section{Followup Motivation}
+\label{sec:ANITA_followup}
+If the ANITA events are considered to have originated from individual cosmic accelerators, then there is no inconsistency with diffuse extremely-high-energy flux limits. This is especially true for accelerators with short characteristic timescales of emission, as many current limits on neutrino point-sources are for integrated emission over various experiments' livetimes \citep{Aartsen:2018ywr} and also as the acceptance of ANITA to a specific location on the sky changes throughout the detector's flight. Therefore, if ANITA detects a single event with an energy above 1 EeV from an incident $E^{-\gamma}$ power law flux, then there should also a large flux of neutrinos with TeV - PeV energies, to which neutrino telescopes such as IceCube would be sensitive. Significant correlation between IceCube and ANITA data would not only lend evidence for a neutrino point source, but it would also eliminate non-astrophysical explanations of the AAE, such as background and systematics or non-astrophysical models which invoke physics beyond the Standard Model.
+
+In the following sections, we outline a followup performed to test the hypothesis that the ANITA neutrino candidate events were astrophysical in origin. We followup the 2 AAE as well as the one AAC. 
+
+\section{Analysis description}
+\label{sec:ANITA:analysis}
+
+The likelihood analysis procedure described in Section~\ref{sec:nusources:lieklihood} describes how to search for a point source from a well localized direction. However, the events which ANITA detects have uncertainties comparable, if not larger than, events which IceCube detects, with localizations on the reconstructed shower coordinates on the order of a few degrees for 39\% containment. Here, we outline the differences between this analysis and the generic point source analyses described in the previous chapter, and we do not go into detail on the PDFs in the likelihood that are generated in manners similar to those presented in Section~\ref{sec:nusources:lieklihood}. 
+
+In order to incorporate this uncertainty into our analysis, we employ a joint likelihood,
+
+\begin{equation}
+\label{eq:joint_likelihood}
+     \mathcal{L} = \lambda \prod_{i=1}^{N} \Bigg( \frac{n_s}{n_s + n_b}S(\mathbf{x}_i, \mathbf{x}_s)  + \frac{n_b}{n_s + n_b}B(\mathbf{x}_i, \mathbf{x}_s) \Bigg) P_A(\mathbf{x}_s) \; .
+\end{equation}
+This likelihood is identical to that of section \ref{sec:nusources:lieklihood}, with the exception of one additional multiplicative term, $P_A(\mathbf{x}_s)$, which describes the ANITA event localization PDFs. Instead of calculating a TS from maximizing the likelihood at a fixed location on the sky, the TS is calculated at \textit{all} locations on the sky. At each location on the sky, $\mathbf{x}_s$, the usual TS is modified as a result of the ANITA prior, and the overall TS becomes
+
+\begin{equation}
+    \label{eq:TS_spatial_prior}
+    \text{TS} = \max_{\mathbf{x}_s} \Bigg( \sum_{i=1}^{N}2\log \left[ 1 + \frac{\hat{n_s} S(\mathbf{x}_i, \mathbf{x}_s)}{n_b B(\mathbf{x}_i)} \right] + 2 \log \left[ \frac{P_A (\mathbf{x}_s)}{P_A (\mathbf{x}_0)} \right] \Bigg)\; .
+\end{equation}
+
+\begin{figure}
+\centering
+\begin{subfigure}
+  \centering
+  \includegraphics[width=.48\linewidth]{figures/ANITA/PixelScan_ANITA.jpeg}
+  %\caption{A subfigure}
+  %\label{fig:ANITA_cartoon}
+\end{subfigure}%
+\begin{subfigure}
+  \centering
+  \includegraphics[width=.48\linewidth]{figures/ANITA/Hotspot_ANITA.jpeg}
+  %\caption{A subfigure}
+  %\label{fig:ANITA_detector}
+\end{subfigure}
+\caption[Spatial prior schematic]{Consider a neutrino source as depicted in the diagram on the left. The source's PDF from another experiment (such as ANITA) is given by the ellipsoidal colored area, and neutrino emission leads to IceCube events shown as white stars. To locate this neutrino source, the likelihood is maximized at every location on the grid, with the value of the TS at each location being downweighted by the ANITA PDF. The combination of the individual likelihood maximizations and the spatial prior based penalties allows for the identification of a global TS and hotspot, as shown on the right. }
+\label{fig:spatial_prior_procedure}
+\end{figure}
+
+This procedure is illustrated in Figure \ref{fig:spatial_prior_procedure}, and has been used in a variety of IceCube analyses, including UHECR-neutrino correlation studies \cite{Schumacher:2019qdx} as well as searches between gravitational waves and neutrinos \cite{Hussain:2019xzb}. As there is no definitive source class to followup, we perform three separate analyses, to search for emission on different characteristic timescales. The three analyses performed were:
+\begin{itemize}
+    \item \textbf{Prompt:} Searches for events temporally and spatially coincident with the ANITA events. This hypothesis is the \textit{minimal} astrophysical hypothesis which results in events detected at ANITA
+    \item \textbf{Rolling:} Searches for events clustered temporally and spatially, but does not require IceCube events to occur simultaneously with ANITA events
+    \item \textbf{Steady:} Searches for events clustered spatially in IceCube data, with no temporal requirements
+\end{itemize}
+The different analyses are also displayed pictorially in Figure \ref{fig:ANITA:analysis_types}. Specific features of the prompt and steady analyses are described in sections \ref{ref:subsec:ANITA_prompt} and \ref{ref:subsec:ANITA_steady}, respectively. The rolling analysis was completed by collaborators at the University of Geneva, for more details, see the paper, published in \textit{the Astrophysical Journal} \citep{ANITACOLLABPAPER}, and included in Appendix \ref{app:ANITA_collaboration_paper}. 
+
+\begin{figure}
+    \centering
+    \includegraphics[width=.95\linewidth]{figures/ANITA/ANITA_different_analyses.png}
+    \caption[ANITA Analysis types]{Different analysis types for the ANITA point source followup. The prompt analysis searches for IceCube events temporally coincident with the ANITA events, whereas the other analyses relax this constraint while sacrificing time-integrated sensitivity.}
+    \label{fig:ANITA:analysis_types}
+\end{figure}
+
+\subsection{Prompt Analysis}
+\label{ref:subsec:ANITA_prompt}
+The prompt analysis focuses on short timescale coincidences. For 99\% containment, the spatial extent of the ANITA PDFs is on the order of around 10 degrees in any given direction. For the event selection used in this analysis \cite{Carver:2019jcd}, the overall event rate is around 4 mHz, meaning the analyses are essentially background free for time windows less than one day (extent is around 1 / 400 of the sky, meaning $4 \mbox{ mHz} \cdot 86400 \mbox{ s} \cdot 0.0025 \approx 1$ event expected in the ANITA PDF per day).
+
+In this regime, TS distributions are characterized by a pileup at TS$=0$, the fraction of which is approximately equal to the proportion of pseudo-experiments in which there is an expectation of zero events in the 99\% containment of the ANITA PDF. So long as the median of this distribution is zero, the sensitivity of this analysis (in $E^2$ scaled time-integrated flux) is constant, and is equal to the flux corresponding to 2.3 signal events, as discussed in Section \ref{sec:poisson_sensitivity}. Distributions for various time-windows are displayed in Figure \ref{fig:ANITA_prompt_bgts}.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=.95\linewidth]{figures/ANITA/Prompt/AAE-141220_background_ts_distributions.png}
+    \caption[ANITA Prompt backgroun TS distributions]{Background TS distributions for the short timescale analysis. At the shortest time windows (left), very few coincident background events are expected, leading to most scrambled trials having a TS of 0, whereas at time windows around a day (right), the background becomes non-negligible.}
+    \label{fig:ANITA_prompt_bgts}
+\end{figure}
+
+Injecting signal on top of this background (as shown in Figure~\ref{fig:ANITA_prompt_sensitivity_fits}) allows one to calculate a sensitivity. These sensitivities are displayed in Figure~\ref{fig:ANITA_prompt_sensitivity}.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=.95\linewidth]{figures/ANITA/Prompt/AAE-141220_prompt_sensitivity_fits.png}
+    \caption[ANITA Prompt signal injection]{Signal injection trials for various time windows. The $x$-axis is the average injected number of signal events, and the $y$-axis denotes the fraction of trials which resulted in a TS greater than the median from background only scrambles (such as the ones in Figure~\ref{fig:ANITA_prompt_bgts}. From these, we can extract the sensitivty as the value of $\langle n_{inj} \rangle$ at which the curve crosses 0.9 on the $y$-axis.}
+    \label{fig:ANITA_prompt_sensitivity_fits}
+\end{figure}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=.8\linewidth]{figures/ANITA/Prompt/prompt_sensitivities_no_upper_limits.png}
+    \caption[ANITA Prompt sensitivity]{Sensitivity (dotted) and 3$\sigma$ discovery potential (dot dashed) for the two ANITA events for which IceCube had simultaneous observations.}
+    \label{fig:ANITA_prompt_sensitivity}
+\end{figure}
+
+\subsection{Steady Analysis}
+\label{ref:subsec:ANITA_steady}
+With the lack of a clear source class and intrinsic timescale of neutrino emission, we also searched for neutrino emission integrated over the entire livetime of the full 86 string detector configuration of IceCube. This section is meant to provide some of the technical plots and details of the analysis. For the full paper, see \cite{ANITA PAPER COLLABORATION}.
+
+We begin in the same way as the prompt search, by characterizing the background in the analysis. Here, as we are integratinig over multiple years of data and examining a large region of the sky (compared to an ideal point-source), there is a greater probability of fitting non-zero signals when extremizing the likelihoods at every individual pixel. As a result, the background TS distributions are pushed to the right compare to the short timescale, low background case, and this is evident in the distributions in Figure \ref{fig:ANITA_steady_distributions}.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=.95\linewidth]{figures/ANITA/Steady/AAE-141220_TS_distributions_with_signal.png}
+    \caption[ANITA Steady TS distributions]{Background TS distribution (blue) compared to background + signal distributions (gray). Different panels are with different levels of injected signal. Here, a large signal is required (relative to that of a typical point-source analysis), because of the large source localization uncertainty.}
+    \label{fig:ANITA_steady_distributions}
+\end{figure}
+
+Sensitivity is then calculated by injecting signal on top of background, following the same procedure as in Section \ref{ref:subsec:ANITA_prompt}. The details of the calculation are displayed in Figure \ref{fig:ANITA_steady_sensitivity}.
+
+\begin{figure}
+\centering
+\begin{subfigure}
+  \centering
+  \includegraphics[width=.48\linewidth]{figures/ANITA/Steady/AAE-141220_sensitivity_fits.png}
+  %\caption{A subfigure}
+  \label{fig:ANITA_steady_sensitivity_fits_aae}
+\end{subfigure}%
+\begin{subfigure}
+  \centering
+  \includegraphics[width=.48\linewidth]{figures/ANITA/Steady/AAC-150108_sensitivity_fits.png}
+  %\caption{A subfigure}
+  \label{fig:ANITA_steady_sensitivity_fits_aac}
+\end{subfigure}
+\caption[ANITA Steady sensitivity calculation]{Calculation of sensitivity to time-integrated neutrino emission, performed in the same way as shown in Figure~\ref{fig:ANITA_prompt_sensitivity_fits}}.
+\label{fig:ANITA_steady_sensitivity}
+\end{figure}
+
+\section{Analysis Results}
+\label{sec:ANITA_results}
+No significant correlation is found in any of the analyses above the expectation from background. In order to calculate p-values, results are compared against pseudo-experiments from time-scrambled data, namely, the background distributions shown in sections \ref{ref:subsec:ANITA_prompt} and \ref{ref:subsec:ANITA_steady}. The most significant observation results from the steady search for AAE-141220, with a p-value of 0.08 before trials correction.
+
+Figure \ref{fig:ANITA_skymaps} displays the sky maps for the prompt, rolling, and steady analyses from left to right in the top panels for AAE-141220. Bottom panels of Figure \ref{fig:ANITA_skymaps} show the comparison of the observed TS values for each analysis, at the position of the red lines, to their respective TS distributions from pseudo-experiments using time-scrambled data. Similar plots for AAE-061228 and AAC-150108 are displayed in Figure~\ref{fig:ANITA_skymaps_extra}.
+
+\begin{figure*}[t!]
+\centering
+\vspace{0.0cm}
+    \includegraphics[width=0.99\textwidth=]{figures/ANITA/AAE-141220_collab_paper_plots.pdf}
+\caption[AAE-141220 Skymaps]{Sky maps (top) and TS distributions (bottom) for AAE-141220 for the prompt (left), rolling (middle), and steady (right) analyses. Observed TS values (shown in red) are compared to distributions from time-scrambled data realizations to quantify the significance.In all sky maps, solid (dotted) lines represent 50\% (99\%) containment of the reconstructed direction of the events. In the prompt analysis sky map, the best-fit location of each IceCube event is represented with an \texttt{x}, and the size of the circle represents the uncertainty (50\% containment) on the event's reconstruction, with color representing the IceCube event arrival time relative to the ANITA event. Both the sky map and TS distribution for this analysis are for the $10^5$ s time window. In the rolling and steady analysis sky maps, color reflects the TS values. For the details of the rolling analysis, see the full paper attached in Appendix \ref{ANITA-collaboration-paper-appendix}} \label{fig:ANITA_skymaps}
+\end{figure*}
+
+\begin{figure*}
+    \centering
+    \includegraphics[width=0.99\textwidth]{figures/ANITA/AAC-150108_collab_paper_plots.pdf}
+    \includegraphics[width=0.99\textwidth]{figures/ANITA/AAE-061228_collab_paper_plots.pdf}
+    \caption[AAE-061228 and AAE-150108 Skymaps]{(Top two rows) Skymaps and TS distributions from all three analyses for AAC-150108. For AAE-061228, IceCube was not in a full detector configuration at the time of the event, and thus only the steady and rolling analyses were used to search for neutrino emission. Skymaps and TS distributions for these analyses are displayed in the bottom two rows.} \label{fig:ANITA_skymaps_extra}
+\end{figure*}
+
+
+\begin{figure}
+\vspace{0.05in}
+\centering
+  \includegraphics[width=0.7\textwidth]{figures/ANITA/Transient_upper_limits.pdf}
+  \label{fig:ANITA_upper_limits}
+  \caption[ANITA point source upper limits]{Sensitivity (dotted) and upper limits (arrows) (90\% confidence level) on the time-integrated $\nu_{\mu} + \bar{\nu}_{\mu}$ flux normalization for an $E^{-2}$ source spectrum as a function of $\Delta t$ from the prompt analysis, compared to the upper limits (solid) from the steady analysis. The central 90\% intervals of the expected neutrino energies for these spectra are 1 TeV-1 PeV. \textcolor{black}{For the prompt analysis, we also include the discovery potential, which is the flux that results in a 3$\sigma$ result, pre-trials, in 90\% of pseudo-experiments.}}
+\end{figure}
+
+In the absence of a significant signal, upper limits (90\% confidence level) for the time-integrated $\nu_{\mu} + \bar{\nu}_{\mu}$ flux are set for each ANITA event where possible using the prompt and steady analyses (Figure~\ref{fig:ANITA_upper_limits}). To calculate upper limits, locations are sampled according to the per-event PDFs reported by ANITA, injecting the same level of flux at each sampled location, and running each iteration through the full analysis procedure, which maximizes the joint likelihood at all locations in the sky. This allows us to place upper limits on point sources whose locations are distributed according to the per-event PDF reported by ANITA. We set these limits for an assumed spectrum given by
+\begin{equation}
+    \Phi (E, t) = \frac{\diff N_{\nu_{\mu} + \bar{\nu}_{\mu}}}{\diff E \diff A \diff t} =  \Phi_0 \Big(\frac{E}{E_0}\Big)^{-2} \; , 
+\end{equation}
+where $\Phi_0$ is a normalization constant on a point-source flux, which carries units of $\rm{GeV}^{-1}\rm{cm}^{-2}\rm{s}^{-1}$. We constrain the time-integrated muon neutrino flux, $E^2F$, where 
+\begin{equation}
+    E^2 F = E^2 \int \Phi(E, t) \diff t \; .
+\end{equation} 
+All of the limits we calculate are provided in Table~\ref{tab:results}. In the case that an upper limit fluctuates below the sensitivity, we conservatively set the upper limit to the sensitivity value. Prompt limits are placed at the specified time windows for emission centered on the ANITA event times, whereas limits from the steady analysis are for emission over the live time of our data sample. This hard spectrum was chosen conservatively because with the observation of EeV events by ANITA, if the underlying spectrum is softer, then the expected number of observable neutrinos for IceCube would increase. As the time-integrated flux sensitivity for the triggered analysis begins to worsen past $10^5$ s, upper limits for $\Delta t > 10^5$ s are only set using the time-integrated approach. 
+
+\begin{table*}%[htb!]
+    \caption[ANITA analysis results]{Analysis results and upper limits.  Upper limits (90\% C.L) are on the time-integrated $\nu_{\mu} + \bar{\nu}_{\mu}$ power law flux ($E^{-2}$ ) from a point source following the spatial probability distribution provided by ANITA. Limits are set assuming constant emission over a fixed time window. Time windows for the steady and analysis are listed as the IceCube seasons analyzed, where IC86-I contains 2.88$\times 10^7$ s of data and IC86-II--IC86-VII contain 1.90$\times 10^8$ s. All $p$-values are not trial-corrected for the number of searches considered.}
+    \centering
+    \begin{tabular}{l | c| c| c | c} \hline
+     Event & Analysis & Time Window  & $p$-value & Upper limit (GeV $\cdot$ cm$^{-2}$)  \\ \hline \hline
+     AAE-061228 & Steady & IC86-I - IC86-VII & 0.606 &  0.195 \\ \hline
+     \multirow{3}{*}{AAE-141220} & & 10 s & - & - \\ 
+	 & Prompt & $10^3$ s & 1.0 & 0.053 \\ 
+	 & & $10^5$ s & 1.0 & 0.051 \\ \cline{2-5}
+	 & Steady & IC86-I - IC86-VII & 0.081 & 0.401 \\ \hline
+	 \multirow{3}{*}{AAC-150108} & & 10 s & 1.0 & 0.040 \\ 
+	 & Prompt & $10^3$ s & 1.0 & 0.041 \\ 
+	 & & $10^5$ s & 1.0 & 0.032 \\ \cline{2-5}
+	 & Steady & IC86-I - IC86-VII & 0.210 & 0.278 \\  \hline
+    \end{tabular}
+    \label{tab:results}
+    \vspace{0.2in}
+\end{table*}
+
+\section{A Joint Interpretation of ANITA and IceCube}
+\label{sec:ANITA:joint_interpretation}
+This non-observation poses a problem when trying to interpret the ANITA events as astrophysical neutrinos. For most astrophysical sources, fluxes are presumed to follow a spectrum which is falling as a function of energy, and thus a non-observation of neutrinos with TeV - PeV energies is at odds with an observation of neutrinos with $\mathcal{O}$(EeV) energies, especially when the effective area and livetime of IceCube are both greater than that of ANITA for these locations in the Northern sky.
+
+However, the tension is even stronger than that, and even more model independent, because for sources in the Northern sky, \textit{any initial $\nu_{\tau}$ flux with energies greater than 10 PeV will be accompanied by a TeV - PeV $\nu_{\mu}$ flux}. Thus, our non-observation constrains even the most finely tuned Standard Model fluxes which could result in an EeV $\nu_{\tau}$ reaching the ANITA detector. 
+
+This is a result of \nutau regeneration. When a high energy \nutau interacts with a nucleon via a CC interaction, a $\tau$ lepton is produced which carries a significant fraction of the initial \nutau energy. This $\tau$ then decays, with characteristic decay length of about 50 m$/$PeV. When the $\tau$ decays, another \nutau is produced, in addition to possible other flavors of neutrino (see diagram below).
+
+\begin{center}
+\begin{tikzpicture}
+\begin{feynman}
+\vertex (d1) {\(d\)}; 
+\vertex[right=5cm of d1] (u3) {\(u\)}; 
+\vertex[below=0.8em of d1] (u1) {\(u\)}; 
+\vertex[right=5cm of u1] (u2) {\(u\)};
+\vertex[below=0.8em of u1] (d2) {\(d\)}; 
+\vertex[right=5cm of d2] (d3) {\(d\)};
+\vertex[above right=0.4cm and 2.5cm of d1] (v1);
+\vertex[above=1.4cm of v1] (v2);
+\vertex[above left=1cm and 2cm of v2] (nu) {$\nu_{\tau}$};
+\vertex[right=3.5cm of v2] (e) {$\tau^-$};
+\diagram* { {[edges=fermion]
+(d1) -- (v1) -- (u3), (u1) -- (u2),
+(d2) -- (d3), (nu) -- (v2) -- (e)},
+(v1) -- [boson, edge label=\(W^{-}\)] (v2)
+};
+\draw [decoration={brace}, decorate] (d2.south west) -- (d1.north west) node [pos=0.5, left] {\(n\)};
+\draw [decoration={brace}, decorate] (u3.north east) --  (d3.south east) node [pos=0.5, right] {\(p\)};
+\end{feynman} 
+\end{tikzpicture}
+\begin{tikzpicture}
+\begin{feynman}
+\vertex (a) {\(\tau^{-}\)};
+\vertex [right=of a] (b);
+\vertex [above right=of b] (f1) {\(\nu_{\tau}\)};
+\vertex [below right=of b] (c);
+\vertex [above right=of c] (f2) {\(\overline \nu_{e},\overline \nu_{\mu},\overline u\)};
+\vertex [below right=of c] (f3) {\(e^{-},\mu^{-},d\)};
+\diagram* {
+(a) -- [fermion] (b) -- [fermion] (f1),
+(b) -- [boson, edge label'=\(W^{-}\)] (c),
+(c) -- [anti fermion] (f2),
+(c) -- [fermion] (f3),
+};
+\end{feynman}
+\end{tikzpicture}
+\end{center}
+
+This secondary \nutau often carries a significant fraction of energy of the initial \nutau, and this secondary \nutau flux will develop and pileup at energies around 100 TeV. The secondary flux does not cascade down to energies lower than this value, because at this energy the Earth becomes transparent, and the \nutau flux is no longer likely to interact before reaching a detector such as IceCube. 
+
+Initial \nutau fluxes can then be constrained by looking for the $\mu$ from $\tau$ decay. For a more detailed description of the properties of secondary fluxes, see the full paper attached in Appendix \ref{APPENDIX WITH FEW AUTHOR PAPER}.
+
+Using this technique to constrain the ANITA events, we found the initial \nutau energy that was most likely to result in a detection at ANITA, and inject the most finely tuned flux (namely a delta function), floating its normalization until the observation of an event at ANITA is expected, where the number of events expected at ANITA is given by
+
+\begin{equation}
+    \langle N ^ { \tau }_{\mathrm{ANITA}} \rangle = \iint \Big( \diff E _ { \nu } \diff E^{\prime} _ { \nu } \Phi \left( E _ { \nu }, t \right) \frac { \diff N \left( E^{\prime} _ { \nu } \right) } { \diff E^{\prime} _ { \nu } } \times \xi _ { a c c } \left( E^{\prime} _ { \nu } \right) \Delta T \Big) ,
+\end{equation}
+
+where $\xi_{acc}$ represents ANITA's acceptance to $\tau$-lepton air showers, taken from \citep{Romero-Wolf:2018zxt}. We then use the secondary \nutau flux from this injected delta function spectrum, and calculate the number of events we would see from $\tau$ decay to $\mu$ in IceCube, given by
+
+\begin{align}
+\langle N _ { \text {IceCube} } ^ { \mu } \rangle & = \int \diff E _ { \mu } \int \diff E _ { \tau } \int \diff E _ { \nu } \Phi \left( E _ { \nu }, t \right) P _ { \tau } ^ { s u r v } \left( E _ { \nu } \right) \frac { \diff N _ { \tau } \left( E _ { \tau } \right) }{ \diff E _ { \tau } }  \\
+& \qquad \frac{\Gamma_{\tau\rightarrow\mu}}{\Gamma_{\rm{total}}} \frac { \diff N _ { \mu } } { \diff E _ { \mu } } \left( E _ { \tau } , E _ { \mu } \right) A _ { e f f } ^ { \mu } \left( E _ { \mu } \right) \Delta T \nonumber
+\\ & + \int \diff E _ { \mu } \int \diff E _ { \tau } \int \diff E _ { \nu } ^ { \prime } \int \diff E _ { \nu } \Phi \left( E _ { \nu }, t \right) P _ { \nu } \left( E _ { \nu } , E _ { \nu } ^ { \prime } \right) \frac { \diff N _ { \nu } } { \diff E _ { \nu } ^ { \prime } } \left( E _ { \nu } ^ { \prime } \right) \nonumber \\ 
+& \qquad N^{p} \left( E^{\prime}_{\nu} \right) \frac { \diff N _ { \tau } } { \diff E _ { \tau } } \left( E ^{\prime} _ { \nu} ; E _ { \tau} \right)  \frac{\Gamma_{\tau\rightarrow\mu}}{\Gamma_{\rm{total}}} \frac { \diff N _ { \mu } } { \diff E _ { \mu } } \left( E _ { \tau} ; E _ { \mu} \right) A _ { e f f } ^ { \mu } \left( E _ { \mu } \right) \Delta T \; , \nonumber
+\end{align}
+
+where the first contribution is from emerging tau-leptons that would decay to muons and then pass an IceCube event selection. The second contribution is from the remaining $\nu_{\tau}$ flux, the majority of which has cascaded down in energy. $N^{p} (E_{\nu})$ is the number of targets effectively seen by an incident neutrino with energy $E_{\nu}$. $P _ { \tau } ^ { s u r v } \left( E _ { \nu } \right)$ and $P _ { \nu }(E _ { \nu })$ represent the survival probability of a $\tau$-lepton and $\nu_{\tau}$, given an incident neutrino energy, respectively, and $\Gamma_{\tau\rightarrow\mu}\big/\Gamma_{\rm{total}}$ represents the branching ratio for the tau-decay to muon channel, which is approximately 18\%.
+
+Figure~\ref{fig:ANITA_taurunner_limits} dispays the results of this calculation. The normalization on the secondary \nutau flux (magenta histogram) is floated until it is inconsistent with the 90\% UL set by the prompt analysis. The corresponding normalization (magneta triangle) is then compared to the normalization required for an observation at ANITA (black). These normalizations are more than four orders of magnitude in tension, requiring a drastic overfluctuation to observe an event at ANITA and not at IceCube. 
+
+\begin{figure*}
+\centering
+  \includegraphics[width=0.65\textwidth]{figures/ANITA/ANITA_pspaper_secondaries_NOpreliminary_deltaT.pdf}
+  \label{fig:ANITA_taurunner_limits}
+  \caption[ANITA secondary fluxes]{Upper limits (90\% C.L.) placed by calculating the secondary neutrino flux (purple histogram) from an incident flux of EeV neutrinos assuming constant emission over $10^3$ s and comparing to the nonobservation of IceCube events in the prompt analysis described in Sect.~\ref{ref:subsec:ANITA_prompt} for AAE-141220. The flux implied by the ANITA observations (black), represented in this figure as $E_{\nu}\Phi_0 \Delta T = E_{\nu} \Delta T \int \Phi(E_{\nu}, t) \diff E_{\nu}$, using information about ANITA's acceptance \citep{Romero-Wolf:2018zxt} overshoots this upper limit (purple arrow) by many orders of magnitude. For comparison, upper limits on the time-integrated muon-neutrino flux from the prompt analysis are shown in blue. All fluxes are per flavor $\nu + \bar{\nu}$.}
+\end{figure*}
+
+The method presented here, constraining high-energy fluxes by looking for secondaries, has a wide range of applications. For example, this method could be beneficial for future correlation searches with radio detectors and future Cherenkov detectors such as POEMMA \citep{Venters:2019xwi}, for point source searches from extreme transients \citep{Righi:2020ufi}, or for searches of GZK neutrinos.
+
+

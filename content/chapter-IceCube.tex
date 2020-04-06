@@ -1,0 +1,49 @@
+\chapter{The IceCube Neutrino Observatory}
+\label{sec:IceCube}
+
+\cleanchapterquote{It's morphology, not topology}{Justin Vandenbroucke}{(University of Wisconsin-Madison)}
+
+
+\section{The IceCube Detector}
+\label{sec:intro:detector}
+
+
+
+
+\begin{tikzpicture}
+\begin{feynman}
+\vertex (d1) {\(d\)}; 
+\vertex[right=5cm of d1] (d2) {\(d\)}; 
+\vertex[below=2em of d1] (u1) {\(u\)}; 
+\vertex[right=5cm of u1] (u2) {\(u\)};
+\vertex[below=2em of u1] (d3) {\(d\)}; 
+\vertex[right=5cm of d3] (u3) {\(u\)};
+\vertex[below right=1cm and 2.5cm of d3] (v1);
+\vertex[below right=1cm and 2cm of v1] (v2);
+\vertex[above right=0.5cm and 1cm of v2] (nu) {$\bar\nu_e$};
+\vertex[below right=0.5cm and 1cm of v2] (e) {$e^-$};
+\diagram* { {[edges=fermion]
+(d1) -- (d2),  (u1) -- (u2),
+(d3) -- (v1) -- (u3), (nu) -- (v2) -- (e)},
+(v1) -- [boson, edge label=\(W\)] (v2)
+};
+\draw [decoration={brace}, decorate] (d3.south west) -- (d1.north west) node [pos=0.5, left] {\(n\)};
+\draw [decoration={brace}, decorate] (d2.north east) --  (u3.south east) node [pos=0.5, right] {\(p\)};
+\end{feynman} 
+\end{tikzpicture}
+
+
+
+\section{Reconstruction Algorithms}
+\label{sec:intro:reconstruction}
+
+
+
+\section{Event Selections}
+\label{sec:icecube:eventselection}
+
+
+
+\section{Astrophysical Neutrino Flux}
+\label{sec:intro:astroflux}
+

@@ -1,0 +1,210 @@
+
+%% LLT: Turn off some annoying warnings...
+\RequirePackage{silence}
+\WarningFilter{titlesec}{Non standard sectioning command}
+\WarningFilter{scrreprt}{Usage of package}
+\WarningFilter{scrreprt}{Activating an ugly workaround}
+
+% **************************************************
+% Document Class Definition
+% **************************************************
+\documentclass[%
+	paper=A4,					
+	twoside=true,				
+	openright,					% doublepage cleaning ends up right side
+	parskip=full,				% spacing value / method for paragraphs
+	chapterprefix=true,			% prefix for chapter marks
+	12pt,						% font size
+	headings=normal,			% size of headings
+	bibliography=totoc,			% include bib in toc
+	listof=totoc,				% include listof entries in toc
+	titlepage=on,				% own page for each title page
+	captions=tableabove,		% display table captions above the float env
+	draft=false,				% value for draft version
+]{scrreprt}%
+
+% **************************************************
+% Debug LaTeX Information
+% **************************************************
+%\listfiles
+
+% **************************************************
+% Information and Commands for Reuse
+% **************************************************
+\newcommand{\thesisTitle}{Searches for Astrophysical Neutrino Sources: from Gigaelectronvolt to Exaelectronvolt}
+\newcommand{\thesisName}{Alex Pizzuto}
+\newcommand{\thesisSubject}{Particle Astrophysics}
+\newcommand{\thesisDate}{\today}
+\newcommand{\thesisVersion}{1.1}
+
+\newcommand{\thesisFirstReviewer}{Reviewer 1}
+\newcommand{\thesisFirstReviewerUniversity}{\protect{University of Wisconsin - Madison}}
+\newcommand{\thesisFirstReviewerDepartment}{Department of Physics}
+
+\newcommand{\thesisSecondReviewer}{Reviewer 2}
+\newcommand{\thesisSecondReviewerUniversity}{\protect{University of Wisconsin - Madison}}
+\newcommand{\thesisSecondReviewerDepartment}{Department of Physics}
+
+\newcommand{\thesisFirstSupervisor}{Justin Vandenbroucke}
+
+\newcommand{\thesisUniversity}{\protect{University of Wisconsin - Madison}}
+\newcommand{\thesisUniversityDepartment}{Department of Physics}
+\newcommand{\thesisUniversityInstitute}{Wisconsin IceCube Particle Astrophysics Center}
+\newcommand{\thesisUniversityGroup}{IceCube Neutrino Observatory: Neutrino Sources WG}
+\newcommand{\thesisUniversityCity}{Madison, WI}
+\newcommand{\thesisUniversityStreetAddress}{222 W Washington Ave UNIT 500}
+\newcommand{\thesisUniversityPostalCode}{53703}
+
+% **************************************************
+% Load and Configure Packages
+% **************************************************
+\usepackage[utf8]{inputenc}		% defines file's character encoding
+\usepackage[english]{babel} % babel system, adjust the language of the content
+\usepackage[					% clean thesis style
+	figuresep=colon,%
+	sansserif=false,%
+	hangfigurecaption=false,%
+	hangsection=true,%
+	hangsubsection=true,%
+	colorize=full,%
+	colortheme=bluemagenta,%
+% LLT: Use biber if using UTF8 encoding
+% 	bibsys=bibtex,%
+	bibsys=biber,%
+	bibfile=bib-refs,%
+	bibstyle=alphabetic,%
+]{cleanthesis}
+
+\usepackage{amsmath,amstext}
+\usepackage{pdfpages}
+\usepackage[T1]{fontenc}
+%\usepackage{apjfonts} 
+%\usepackage[figure,figure*]{hypcap}
+\usepackage[utf8]{inputenc}
+\usepackage{array}
+\usepackage{makecell}
+\usepackage{booktabs}
+\usepackage{threeparttable}
+\usepackage{mathrsfs}
+\usepackage{mathtools}
+%\usepackage{lineno}
+\usepackage{footmisc}
+\usepackage{multirow}
+\newcommand*\diff{\mathop{}\!\mathrm{d}}
+\newcommand*\numu{$\nu_{\mu}$ }
+\newcommand*\nutau{$\nu_{\tau}$ }
+\newcommand*\nue{$\nu_{e}$ }
+\newcommand*\numubar{$\bar{\nu}_{\mu}$ }
+\newcommand*\nutaubar{$\bar{\nu}_{\tau}$ }
+\newcommand*\nuebar{$\bar{\nu}_{e}$ }
+
+\hypersetup{					% setup the hyperref-package options
+	pdftitle={\thesisTitle},	% 	- title (PDF meta)
+	pdfsubject={\thesisSubject},% 	- subject (PDF meta)
+	pdfauthor={\thesisName},	% 	- author (PDF meta)
+	plainpages=false,			% 	-
+	colorlinks=false,			% 	- colorize links?
+	pdfborder={0 0 0},			% 	-
+	breaklinks=true,			% 	- allow line break inside links
+	bookmarksnumbered=true,		%
+	bookmarksopen=true			%
+}
+\usepackage{tikz} 
+\usetikzlibrary{shapes,arrows,positioning,automata,backgrounds,calc,er,patterns}
+\usepackage{tikz-feynman}
+\tikzfeynmanset{compat=1.0.0}
+
+% **************************************************
+% Document CONTENT
+% **************************************************
+\begin{document}
+
+\newcommand\brabar{\scalebox{.3}{(}\raisebox{-1.7pt}{$-$}\scalebox{.3}{)}}
+
+% --------------------------
+% rename document parts
+% --------------------------
+\renewcaptionname{english}{\figurename}{Fig.}
+\renewcaptionname{english}{\tablename}{Tab.}
+
+% --------------------------
+% Front matter
+% --------------------------
+\pagenumbering{roman}			% roman page numbing (invisible for empty page style)
+\pagestyle{empty}				% no header or footers
+\input{content/titlepages}		% INCLUDE: all titlepages
+\clearpage
+
+\pagestyle{plain}				% display just page numbers
+\input{content/abstract}		% INCLUDE: the abstracts 
+\clearpage
+%
+\input{content/acknowledgement} % INCLUDE: acknowledgement
+\clearpage
+%
+\setcounter{tocdepth}{2}		% define depth of toc
+\tableofcontents				% display table of contents
+\clearpage
+
+% --------------------------
+% Body matter
+% --------------------------
+\pagenumbering{arabic}			% arabic page numbering
+\setcounter{page}{1}			% set page counter
+\pagestyle{maincontentstyle} 	% fancy header and footer
+
+\input{content/chapter-introduction} 
+\input{content/chapter-neutrino-astronomy} 
+\input{content/chapter-IceCube}
+\input{content/chapter-Sources-of-astro-neutrinos}
+\input{content/chapter-source-searches}
+\input{content/chapter-ANITA} %DONE
+\input{content/chapter-FRA}
+\input{content/chapter-density}
+\input{content/chapter-Novae}
+%\input{content/chapter-FRBs}
+\input{content/chapter-DECO.tex}
+\appendix
+\input{content/appendix-sensitivity_explanation}
+\input{content/appendix-short_timescale_sensitivity_montecarlo}
+\input{content/appendix-seasonal_variations} %DONE
+\input{content/appendix-fast_response_tutorial} 
+\input{content/appendix-rotating-density-luminosity} %DONE
+\input{content/appendix-astrobites}
+\input{content/appendix-geomagnetic-muons}
+\input{content/appendix-ANITA_collaboration_paper}
+\input{content/appendix-ANITA_few_author} %DONE
+\nocite{*}
+\clearpage
+
+% --------------------------
+% Back matter
+% --------------------------
+{%
+\setstretch{1.1}
+\renewcommand{\bibfont}{\normalfont\small}
+\setlength{\biblabelsep}{0pt}
+\setlength{\bibitemsep}{0.5\baselineskip plus 0.5\baselineskip}
+%\bibliographystyle{abbrv}
+\printbibliography
+%\printbibliography[nottype=online]
+%\printbibliography[heading=subbibliography,title={Websites},type=online,prefixnumbers={@}]
+}
+\clearpage
+
+\listoffigures
+\clearpage
+
+\listoftables
+\clearpage
+
+
+\input{content/declaration}
+\clearpage
+\newpage
+\mbox{}
+
+% **************************************************
+% End of Document CONTENT
+% **************************************************
+\end{document}
