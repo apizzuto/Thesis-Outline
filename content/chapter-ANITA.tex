@@ -1,4 +1,4 @@
-\chapter{Search for Counterparts to ANITA Neutrino Candidates}
+\chapter{Multi-wavelength neutrino astronomy and EeV neutrino source searches}
 \label{sec:ANITA}
 
 
@@ -14,7 +14,7 @@ As described in section XXX, at the highest energies, the Universe is opaque to 
 \end{equation}
 The temperature of CMB photons ($\approx$ 2.7 K) fixes the proton energy for this resonance to be at or above around $10^{19.5}$ EeV. This resonant cross section leads to a steepening of the cosmic-ray spectrum, predicted independently by Griesen \cite{Greisen:1966jv} as well as Zatsepin and Kuzmin \cite{Zatsepin:1966jv} (this cutoff eponymously takes the name the ``GZK cutoff''). 
 
-While this process limits the reach of UHECR protons to be within a few tens of Mpc from their inception, the mesonic products of this cutoff lead to an increase in the UHE neutrino flux (``GZK'' or ``cosmogenic'' neutrinos) \cite{Beresinsky:1969qj}. Just as with the $pp$ and $p\gamma$ interactions discussed in Section XXX, the charged pions created from the UHECR-CMB interactions will decay into neutrinos, each of which carries a few percent of the initial UHE proton energy. 
+While this process limits the reach of UHECR protons to be within a few tens of Mpc from their production sites, the mesonic products of this cutoff lead to an increase in the UHE neutrino flux (``GZK'' or ``cosmogenic'' neutrinos) \cite{Beresinsky:1969qj}. Just as with the $pp$ and $p\gamma$ interactions discussed in Section XXX, the charged pions created from the UHECR-CMB interactions will decay into neutrinos, each of which carries a few percent of the initial UHE proton energy. 
 
 However, by considering the magnitude of the predicted neutrino fluxes from bottom-up models with AGN \cite{Murase:2015ndr, Murase:2014foa}, pulsars \cite{Fang:2013vla}, low-luminosity GRBs \cite{Boncioli:2018lrv}, Tidal Disruption Events \cite{Biehl:2017hnb}, or binary neutron stars \cite{Fang:2017tla}, or by considering the remaining parameter space from current experimental constraints \cite{Kotera:2010yn, Ahlers:2010fw, Ahlers:2012rz, Heinze:2019jou}, it quickly becomes clear that instrumented volumes exceeding that of a cubic-kilometer are necessary to detect the GZK neutrino flux. 
 
@@ -30,19 +30,9 @@ The ANtarctic Impulsive Transient Antenna (ANITA) is a NASA long duration balloo
 
 \begin{figure}
 \centering
-\begin{subfigure}
-  \centering
-  \includegraphics[width=.65\linewidth]{figures/ANITA/ANITA_signals.png}
-  %\caption{A subfigure}
-  \label{fig:ANITA_cartoon}
-\end{subfigure}%
-\begin{subfigure}
-  \centering
-  \includegraphics[width=.3\linewidth]{figures/ANITA/ANITA_detector.png}
-  %\caption{A subfigure}
-  \label{fig:ANITA_detector}
-\end{subfigure}
-\caption[ANITA detector schematic]{(left) Sources to which ANITA is sensitive, with the exception of thermal noise. (right) The ANITA payload before the instrument's fourth flight. Both images taken from \cite{Ludwig:2019}}
+\subfigure{\label{fig:ANITA_cartoon}\includegraphics[width=.65\linewidth]{figures/ANITA/ANITA_signals.png}}
+\subfigure{\label{fig:ANITA_detector}\includegraphics[width=.3\linewidth]{figures/ANITA/ANITA_detector.png}}
+\caption[ANITA detector schematic]{(left) Sources to which ANITA is sensitive, with the exception of thermal noise. (right) The ANITA payload before the instrument's fourth flight. Both images taken from \cite{Ludwig:2019}.}
 \label{fig:ANITA_instrument}
 \end{figure}
 
@@ -140,7 +130,7 @@ Injecting signal on top of this background (as shown in Figure~\ref{fig:ANITA_pr
 
 \subsection{Steady Analysis}
 \label{ref:subsec:ANITA_steady}
-With the lack of a clear source class and intrinsic timescale of neutrino emission, we also searched for neutrino emission integrated over the entire livetime of the full 86 string detector configuration of IceCube. This section is meant to provide some of the technical plots and details of the analysis. For the full paper, see \cite{ANITA PAPER COLLABORATION}.
+With the lack of a clear source class and intrinsic timescale of neutrino emission, we also searched for neutrino emission integrated over the entire livetime of the full 86 string detector configuration of IceCube. This section is meant to provide some of the technical plots and details of the analysis. For the full paper, see \cite{Aartsen:2020vir}.
 
 We begin in the same way as the prompt search, by characterizing the background in the analysis. Here, as we are integratinig over multiple years of data and examining a large region of the sky (compared to an ideal point-source), there is a greater probability of fitting non-zero signals when extremizing the likelihoods at every individual pixel. As a result, the background TS distributions are pushed to the right compare to the short timescale, low background case, and this is evident in the distributions in Figure \ref{fig:ANITA_steady_distributions}.
 

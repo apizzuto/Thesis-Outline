@@ -76,6 +76,7 @@
 ]{cleanthesis}
 
 \usepackage{amsmath,amstext}
+\usepackage{amsfonts}
 \usepackage{pdfpages}
 \usepackage[T1]{fontenc}
 %\usepackage{apjfonts} 
@@ -112,7 +113,15 @@
 \usepackage{tikz} 
 \usetikzlibrary{shapes,arrows,positioning,automata,backgrounds,calc,er,patterns}
 \usepackage{tikz-feynman}
-\tikzfeynmanset{compat=1.0.0}
+\tikzfeynmanset{every vertex/.style={red, dot},
+every particle/.style={blue},
+every blob/.style={draw=green!40!black, pattern color=green!40!black}
+}
+\usepackage{listings}
+% \usepackage{subcaption}
+% \captionsetup{compatibility=false}
+\usepackage{graphicx,subfigure}
+
 
 % **************************************************
 % Document CONTENT
@@ -153,27 +162,32 @@
 \setcounter{page}{1}			% set page counter
 \pagestyle{maincontentstyle} 	% fancy header and footer
 
+\part{Searching for Astrophysical Neutrino Sources}
 \input{content/chapter-introduction} 
 \input{content/chapter-neutrino-astronomy} 
 \input{content/chapter-IceCube}
-\input{content/chapter-Sources-of-astro-neutrinos}
 \input{content/chapter-source-searches}
-\input{content/chapter-ANITA} %DONE
-\input{content/chapter-FRA}
-\input{content/chapter-density}
 \input{content/chapter-Novae}
-%\input{content/chapter-FRBs}
+\input{content/chapter-FRA}
+\input{content/chapter-ANITA} %DONE
+
+\part{Bringing Multi-Messenger Astronomy to the Public}
 \input{content/chapter-DECO.tex}
+\input{content/chapter-windows_onto_the_universe_public}
+\input{content/chapter-astrobites}
+
 \appendix
-\input{content/appendix-sensitivity_explanation}
-\input{content/appendix-short_timescale_sensitivity_montecarlo}
 \input{content/appendix-seasonal_variations} %DONE
 \input{content/appendix-fast_response_tutorial} 
 \input{content/appendix-rotating-density-luminosity} %DONE
-\input{content/appendix-astrobites}
+\input{content/appendix-millipede-maps}
 \input{content/appendix-geomagnetic-muons}
-\input{content/appendix-ANITA_collaboration_paper}
+\input{content/appendix-ANITA_collaboration_paper} %DONE
 \input{content/appendix-ANITA_few_author} %DONE
+\input{content/appendix-FRA_paper} %DONE
+\input{content/appendix-alert_followup_paper}
+\input{content/appendix-nova_paper}
+\input{content/appendix-DECO_monte_carlo_paper}
 \nocite{*}
 \clearpage
 

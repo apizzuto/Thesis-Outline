@@ -1,2 +1,56 @@
 \chapter{Fast Response Analysis Tutorial}
 \label{sec:FRA_tutorial}
+
+Here I provide a brief overview on how to use the Fast Response Analysis (FRA) pipeline. The code is available at \url{https://github.com/IceCubeOpenSource/FastResponseAnalysis}, and a similar walkthrough appears in the \texttt{README} of this repository. 
+
+\subsection{Installation}
+The FRA code has a dependency on the IceCube realtime software. This enables the user to query the realtime database and access events detected at Pole with a latency of around 30 seconds. The trunk (and any release including and after v02-00) use python3. v01-00 uses python2, and as such, if you would like to use that version, you may have to adjust the installation below to point to relevant python2 environments. To set up the IceCube realtime software, perform the following commands:
+
+\begin{lstlisting}[language=bash]
+eval `/cvmfs/icecube.opensciencegrid.org/py3-v4.1.0/setup.sh`
+svn co http://code.icecube.wisc.edu/svn/meta-projects/combo/releases/V01-00-00/ src
+mkdir build 
+cd build
+cmake ../src
+make
+\end{lstlisting}
+
+After you have a version of icerec built, you will want to do a parasitic build of the realtime project, building off of this version of icerec. To do this, navigate to a new directory where you want your realtime project to live, and run
+
+\begin{lstlisting}[language=bash]
+svn co http://code.icecube.wisc.edu/svn/meta-projects/realtime/trunk/ src
+mkdir build 
+cd build
+cmake ../src/ -DMETAPROJECT=/path/to/icerec/build/ -DCMAKE_INSTALL_PREFIX=combo-plus.${OS_ARCH}
+make
+\end{lstlisting}
+
+You can now load the realtime project with
+
+\begin{lstlisting}[language=bash]
+/path/to/realtime/build/env-shell.sh
+\end{lstlisting}
+
+Once you are in your realtime project, you will need to install the relevant dependencies this project requires. We recommend making a virtual environment and installing the relevant dependencies by running the following lines
+
+\begin{lstlisting}[language=bash]
+python3 -m venv fra_env
+source fra_env/bin/activate
+pip install -r /path/to/fast-response/requirements.txt
+\end{lstlisting}
+
+% This will create a virtual environment names \texttt{fra_env}, and the source \texttt{fra_env/bin/activate} line will activate the environment.
+
+In the future, you will not need to jump through these hoops, and you can load the environment with these lines:
+
+\begin{lstlisting}[language=bash]
+eval `/cvmfs/icecube.opensciencegrid.org/py3-v4.1.0/setup.sh`
+/path/to/realtime/build/env-shell.sh
+source /path/to/fra_env/bin/activate
+\end{lstlisting}
+
+If you would like to be able to import fast response tools from any directory in the future, you must append to your python path with
+
+\begin{lstlisting}[language=bash]
+export PYTHONPATH=$PYTHONPATH:/path/to/fast-response
+\end{lstlisting}
